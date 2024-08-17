@@ -67,12 +67,3 @@ The model is able to predict fraudulent transactions with high accuracy. For exa
 
 The model predicted this transaction as "Fraud".
 
-## Installation
-
-To run this project locally, follow these steps:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/fraud-detection-system.git
-   cd fraud-detection-system
