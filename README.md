@@ -1,69 +1,127 @@
-# Fraud Detection System
+Here’s a sample `README.md` file that you can use for your GitHub project:
 
-This project aims to develop a machine learning model that can detect fraudulent transactions using financial transaction data. The dataset includes various features such as transaction type, amount, origin account balance, and destination account balance, which are used to train the model.
+```markdown
+# Fraud Detection Web Application
 
-## Table of Contents
+This project is a simple **Fraud Detection Web Application** that allows users to input transaction details and get a prediction of whether the transaction is fraudulent or not. The application uses a pre-trained machine learning model (Decision Tree) to classify the transactions based on user input.
 
-- [Project Overview](#project-overview)
-- [Dataset](#dataset)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
-- [Feature Engineering](#feature-engineering)
-- [Model Training](#model-training)
-- [Results](#results)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## Features
 
-## Project Overview
+- Simple HTML form for entering transaction details.
+- Flask-based web application for handling user input and making predictions.
+- Pre-trained Decision Tree model for fraud detection.
+- The application predicts whether a transaction is **Fraudulent** or **Not Fraudulent**.
+- Modern and clean user interface with basic form styling.
 
-The goal of this project is to predict fraudulent transactions using a Decision Tree Classifier. We preprocess the dataset, explore the data, check correlations between features, and train a machine learning model to classify transactions as "Fraud" or "No Fraud".
+## Technologies Used
 
-## Dataset
+- **Flask**: For building the web application and handling HTTP requests.
+- **HTML/CSS**: For the front-end form and page styling.
+- **Joblib**: To load the pre-trained machine learning model.
+- **scikit-learn**: Used to train the Decision Tree classifier.
+- **Python**: The programming language used throughout the project.
 
-The dataset used in this project contains the following columns:
+## Project Structure
 
-- `step`: Time step of the transaction
-- `type`: Type of transaction (e.g., CASH_OUT, PAYMENT, etc.)
-- `amount`: Amount of the transaction
-- `nameOrig`: Customer ID of the origin account
-- `oldbalanceOrg`: Initial balance of the origin account
-- `newbalanceOrig`: New balance of the origin account after the transaction
-- `nameDest`: Customer ID of the destination account
-- `oldbalanceDest`: Initial balance of the destination account
-- `newbalanceDest`: New balance of the destination account after the transaction
-- `isFraud`: Indicates if the transaction is fraudulent (1) or not (0)
-- `isFlaggedFraud`: Indicates if the transaction is flagged as potentially fraudulent (1) or not (0)
+```
+fraud_detection/
+│
+├── templates/
+│   └── index.html          # HTML file for the input form and result display
+├── fraud_detection_model.pkl # Pre-trained machine learning model
+└── app.py                  # Flask app to run the server and handle predictions
+```
 
-## Exploratory Data Analysis
+## Getting Started
 
-We performed the following steps to explore the dataset:
+### Prerequisites
 
-1. **Null Values Check**: Ensured there are no missing values in the dataset.
-2. **Transaction Type Distribution**: Visualized the distribution of transaction types using a pie chart.
-3. **Correlation Analysis**: Checked correlations between features and the target variable (`isFraud`).
+Before running this application, ensure you have the following installed:
 
-## Feature Engineering
+- Python 3.x
+- Flask
+- joblib
+- scikit-learn
 
-- Encoded the `type` feature into numerical values.
-- Mapped the `isFraud` target variable to "Fraud" and "No Fraud" labels for better interpretability.
+You can install the necessary Python packages by running:
 
-## Model Training
+```bash
+pip install Flask joblib scikit-learn
+```
 
-We trained a Decision Tree Classifier using the following steps:
+### Running the Application
 
-1. **Data Splitting**: Split the dataset into training and testing sets (80% training, 20% testing).
-2. **Model Training**: Trained the model on the training data.
-3. **Model Evaluation**: Achieved an accuracy score of 99.97% on the test set.
+1. Clone this repository to your local machine:
 
-## Results
+   ```bash
+   git clone https://github.com/yourusername/fraud-detection-webapp.git
+   ```
 
-The model is able to predict fraudulent transactions with high accuracy. For example, it correctly identified a transaction with the following features as fraudulent:
+2. Navigate to the project directory:
 
-- `type`: Transfer (encoded as 4)
-- `amount`: 9000.60
-- `oldbalanceOrg`: 9000.60
-- `newbalanceOrig`: 0.0
+   ```bash
+   cd fraud_detection
+   ```
 
-The model predicted this transaction as "Fraud".
+3. Run the Flask application:
+
+   ```bash
+   python app.py
+   ```
+
+4. Open your web browser and go to `http://127.0.0.1:5000/` to access the fraud detection form.
+
+### Usage
+
+- Input transaction details such as transaction type, amount, old balance, and new balance into the form.
+- Click the "Submit" button to get the prediction.
+- The application will display whether the transaction is **Fraud** or **No Fraud**.
+
+### Example Input
+
+| Field           | Example Value |
+|-----------------|---------------|
+| Transaction Type| 4 (TRANSFER)  |
+| Amount          | 9000.60       |
+| Old Balance     | 9000.60       |
+| New Balance     | 0.00          |
+
+### Example Output
+
+- **Prediction**: No Fraud
+
+## Model Details
+
+The pre-trained model is a **Decision Tree Classifier** trained on a dataset of financial transactions. It uses features such as:
+
+- Transaction Type (CASH_OUT, PAYMENT, CASH_IN, TRANSFER, DEBIT)
+- Transaction Amount
+- Old Balance
+- New Balance
+
+The model was saved using **joblib** and is loaded into the Flask app for making predictions.
+
+## Future Enhancements
+
+- Improve the model by using other algorithms or a more extensive dataset.
+- Add error handling and validation for the input data.
+- Add more styling and interactivity to the front-end.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgements
+
+- Thanks to the **scikit-learn** community for the machine learning resources.
+- Flask documentation for providing a straightforward guide to building web applications.
+
+```
+
+### Instructions:
+
+1. Replace `yourusername` in the `git clone` link with your GitHub username.
+2. If you make further enhancements or adjustments to the project, update the "Future Enhancements" section.
+
+Let me know if you need any further adjustments or clarifications!
 
