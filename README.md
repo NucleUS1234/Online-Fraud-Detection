@@ -3,7 +3,9 @@
 # Fraud Detection Web Application
 
 This project is a **Fraud Detection Web Application** that allows users to input details of a financial transaction (like transaction type, amount, old balance, and new balance) and get a prediction on whether the transaction is fraudulent or not. The app is powered by a **pre-trained Decision Tree Classifier**.
-<img width="331" alt="image" src="https://github.com/user-attachments/assets/da297447-8785-4be5-91bc-1b92c3c29f42">
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/da297447-8785-4be5-91bc-1b92c3c29f42">
+
+
 
 ## Features
 
