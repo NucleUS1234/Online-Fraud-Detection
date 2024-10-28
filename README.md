@@ -1,6 +1,4 @@
-Here’s the README file for your project in plain text format:
 
----
 
 # Fraud Detection Web Application
 
