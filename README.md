@@ -113,21 +113,11 @@ The model was trained using **scikit-learn** and saved using **joblib** for easy
 - Expand the UI for a more intuitive user experience.
 - Add user authentication and transaction logs for tracking predictions.
 
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-## Contributing
-
-Contributions are welcome! Please open a pull request or issue if you have any improvements or suggestions.
 
 ## Acknowledgements
 
 - **scikit-learn** for the machine learning framework.
 - **Flask** for providing an easy-to-use web framework.
 - **Joblib** for model serialization and deserialization.
-
----
-
-Replace `yourusername` with your GitHub username if you're sharing this on GitHub. Let me know if you need any more changes!
 
